@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg sticky-navbar navbar-shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand mx-auto" href="#">
+      <img src="./assets/logo.png" id="navbar-logo">
+    </a>
+    <button (click)="toggleCollapse()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [class.show]="show" id="navbarNav">
+      <ul class="navbar-nav">
+        <div class="primer-elemento">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/inicio" routerLinkActive="active">Inicio</a>
+          </li>
+        </div>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/original" routerLinkActive="active">Cronología original</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/alternativa" routerLinkActive="active">Cronología alternativa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/peliculas" routerLinkActive="active">Películas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/sobre-mi" routerLinkActive="active">Sobre mí</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row align-items-center justify-content-center" id="encabezado">
+        <div class="col-md-4 col-sm-8 titulo">
+            <h5 id="titulo">Temporada 1</h5>
+            <p>El equipo de fútbol del Instituto Raimon, capitaneados por Mark Evans, sueñan con ganar el Campeonato Nacional. Para ello deberán vencer a los mejores equipos del país, entre los que se encuentra el equipo de Jude Sharp, "Royal Academy", ganador del torneo en varias ocasiones. Aunque en un principio los jugadores del Raimon se sienten desmotivados, Mark consigue que Axel Blaze, un excelente jugador que había abandonado el fútbol, se una a ellos. Basarán su entrenamiento en el cuaderno de supertécnicas del abuelo de Mark, portero legendario del famoso equipo "Inazuma Eleven". Tendrán que entrenar con gran empeño y hacer frente a un misterioso enigma, un plan malvado que se cierne sobre ellos... ¿serán capaces de soportar tanta presión? ¿Conseguirán vencer los obstáculos y alcanzar sus objetivos? ¡¡¡ Inazuma Eleven... la leyenda ha comenzado !!!.</p>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <img id="imagen-titulo" src="assets/temporada1.jpg">
+        </div>
+    </div>
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-12 col-sm-12">
+            <h6 id="episodios-titulo">Episodios: </h6>
+            <div class="order-button">
+                <button (click)="toggleOrder()">
+                    {{ ascendingOrder ? 'Orden Ascendente' : 'Orden Descendente' }}
+                    <span [ngClass]="{'rotate': !ascendingOrder}">&#8595;</span>
+                </button>
+            </div>
+            <div class="row">
+                <div *ngFor="let video of videos" class="col-md-4 col-12 video-item">
+                    <a href="https://www.youtube.com/watch?v={{ video.resourceId.videoId }}" target="_blank">
+                        <div class="video-card">
+                            <img [src]="video.thumbnails.default.url" alt="{{ video.title }}">
+                            <p class="video-title">{{ video.title }}</p>
+                            <p class="video-description">{{ video.description }}</p>
+                        </div>
+                    </a>
+                </div>
+        </div>
+    </div>
+</div>

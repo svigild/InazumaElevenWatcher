@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row align-items-center justify-content-center" id="encabezado">
+        <div class="col-md-4 col-sm-8 titulo">
+            <h5 id="titulo">Temporada 2</h5>
+            <p>Después de ganar la final del torneo Fútbol Frontier al final de Inazuma Eleven, el equipo de fútbol del Instituto Raimon se reunió en la Ribera del Río para celebrar la victoria. Una explosión en la escuela sucede, y el equipo se dirige inmediatamente hacia allí. Al llegar, el instituto se encontraba en ruinas, y unos extraños seres afirman venir del espacio, del remoto Planeta Alius. El Instituto Raimon deberá recorrer toda Japón para reclutar a los mejores futbolistas del país y crear un equipo capaz de vencer a los de la malvada Academia Alius.</p>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <img id="imagen-titulo" src="assets/temporada2.jpg">
+        </div>
+    </div>
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-12 col-sm-12">
+            <h6 id="episodios-titulo">Episodios: </h6>
+            <div class="order-button">
+                <button (click)="toggleOrder()">
+                    {{ ascendingOrder ? 'Orden Ascendente' : 'Orden Descendente' }}
+                    <span [ngClass]="{'rotate': !ascendingOrder}">&#8595;</span>
+                </button>
+            </div>
+            <div class="row">
+                <div *ngFor="let video of videos" class="col-md-4 col-12 video-item">
+                    <a href="https://www.youtube.com/watch?v={{ video.resourceId.videoId }}" target="_blank">
+                        <div class="video-card">
+                            <img [src]="video.thumbnails.default.url" alt="{{ video.title }}">
+                            <p class="video-title">{{ video.title }}</p>
+                            <p class="video-description">{{ video.description }}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

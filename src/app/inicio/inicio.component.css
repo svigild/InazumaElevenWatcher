@@ -1,0 +1,59 @@
+.container-fluid {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    margin: 0; /* Elimina los márgenes por defecto */
+}
+
+.saga-content {
+    position: relative; /* Necesario para posicionar el texto */
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: filter 0.5s;
+}
+
+.saga-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.5s;
+}
+
+.saga-label {
+    position: absolute;
+    top: 50%; /* Coloca el texto en el centro vertical */
+    left: 50%; /* Coloca el texto en el centro horizontal */
+    transform: translate(-50%, -50%); /* Centra el texto */
+    font-size: 4.5vh; /* Tamaño de fuente más grande */
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    opacity: 0; /* Inicialmente oculta el texto */
+    padding: 10px 20px; /* Espaciado interno para el fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: opacity 0.5s;
+}
+
+.saga-content:hover .saga-image {
+    filter: grayscale(0%);
+}
+
+.saga-content:hover .saga-label {
+    opacity: 1; /* Muestra el texto al pasar el ratón */
+}
+
+.col-md-6 {
+    padding: 0;
+    margin: 0;
+}
+
+

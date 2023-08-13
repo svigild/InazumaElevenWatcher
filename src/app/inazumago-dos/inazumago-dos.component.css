@@ -1,0 +1,112 @@
+#imagen-titulo {
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; 
+    margin-top: 15px; /* Añade un margen superior para separar de los textos */
+}
+
+#encabezado {
+    background-color: #212529;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.row {
+    background-color: #212529;
+    color: white;
+}
+
+.imagen-temporada {
+    max-width: 250px;
+}
+
+.saga-nombre {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #FF9800;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: #FF9800;
+}
+
+#titulo {
+    color: #FF9800;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+#episodios-titulo {
+    color: #FF9800;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Estilos para la clase video-card */
+.video-card {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 15px; /* Agrega un margen inferior para separar las cartas */
+  }
+  
+  .video-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Estilos para el título y descripción del video */
+  .video-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333; /* Cambia el color del título para que sea legible */
+  }
+  
+  .video-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+
+  .order-button button {
+    background-color: #FF9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.order-button button span {
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.order-button button.rotate span {
+    transform: rotate(180deg);
+}
+
+
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}

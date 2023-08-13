@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row align-items-center justify-content-center" id="encabezado">
+        <div class="col-md-4 col-sm-8 titulo">
+            <h5 id="titulo">Temporada 3</h5>
+            <p>Tras derrotar a la Academia Alius, se inicia el Fútbol Frontier Internacional, un torneo entre los mejores equipos de todo el mundo. La selección de Japón, Inazuma Japón, dirigida por Percival Travis y capitaneada por Mark Evans, va superando a muchos equipos fuertes, conociendo a jugadores increíbles como Paolo Bianchi o Hector Helio y creciendo como equipo, hasta derrotar a The Little Giants en la final, y coronarse como el mejor equipo del mundo.</p>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <img id="imagen-titulo" src="assets/temporada3.jpg">
+        </div>
+    </div>
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-12 col-sm-12">
+            <h6 id="episodios-titulo">Episodios: </h6>
+            <div class="order-button">
+                <button (click)="toggleOrder()">
+                    {{ ascendingOrder ? 'Orden Ascendente' : 'Orden Descendente' }}
+                    <span [ngClass]="{'rotate': !ascendingOrder}">&#8595;</span>
+                </button>
+            </div>
+            <div class="row">
+                <div *ngFor="let video of videos" class="col-md-4 col-12 video-item">
+                    <a href="https://www.youtube.com/watch?v={{ video.resourceId.videoId }}" target="_blank">
+                        <div class="video-card">
+                            <img [src]="video.thumbnails.default.url" alt="{{ video.title }}">
+                            <p class="video-title">{{ video.title }}</p>
+                            <p class="video-description">{{ video.description }}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
