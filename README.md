@@ -1,6 +1,6 @@
 # InazumaEleven
 
-https://inazuma-eleven-watcher.netlify.app/inicio
+https://inazuma-eleven-watcher.netlify.app
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
